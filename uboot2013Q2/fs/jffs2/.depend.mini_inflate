@@ -1,0 +1,9 @@
+mini_inflate.o: mini_inflate.c \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/config.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/config_cmd_defaults.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/config_defaults.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/configs/armada_xp.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/asm/config.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/configs/../../board/mv_ebu/axp/mvSysHwConfig.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/config_cmd_default.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/jffs2/mini_inflate.h

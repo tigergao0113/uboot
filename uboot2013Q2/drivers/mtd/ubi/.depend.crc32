@@ -1,0 +1,12 @@
+crc32.o: crc32.c \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/types.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/config.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/posix_types.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/stddef.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/asm/posix_types.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/asm/types.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/asm/byteorder.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/byteorder/little_endian.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/byteorder/swab.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/byteorder/generic.h \
+ crc32defs.h crc32table.h

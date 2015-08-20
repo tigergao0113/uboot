@@ -1,0 +1,19 @@
+compr_rubin.o: compr_rubin.c \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/config.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/config_cmd_defaults.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/config_defaults.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/configs/armada_xp.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/asm/config.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/configs/../../board/mv_ebu/axp/mvSysHwConfig.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/config_cmd_default.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/jffs2/jffs2.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/asm/types.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/jffs2/load_kernel.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/list.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/stddef.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/types.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/config.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/posix_types.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/asm/posix_types.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/poison.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/jffs2/compr_rubin.h

@@ -1,0 +1,33 @@
+[Global]
+CurrentProject=BH.vpj
+[ProjectDates]
+BH.vpj=20130418151236000
+[ActiveConfig]
+BH.vpj=Debug
+[TreeExpansion2]
+-@ BH.vpj
+  - Source Files
+  - Header Files
+  + Resource Files
+  + Bitmaps
+  + Other Files
+scroll:15
+[State]
+SCREEN: 1680 1050 -1 26 1681 977 0 0 N 0 0 0 0 1346 593 0
+CWD: ../bin_hdr
+FILEHIST: 9
+inc/ddr3_alp_vars.h
+inc/ddr3_a370_vars.h
+inc/ddr3_axp_vars.h
+src_ddr/src-internal/ddr3_dqs.c
+src_phy_alp/mvHighSpeedEnvLib.c
+inc/ddr3_alp_config.h
+src_ddr/inc-internal/ddr3_hw_training.h
+src_ddr/ddr3_init.c
+inc/ddr3_axp.h
+DEBUG: 0 0 0 0 3 0 gdb
+printf
+strcpy
+std::*
+DEBUG2: 0
+TBCLASS: 0 0

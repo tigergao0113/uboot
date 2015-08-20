@@ -1,0 +1,8 @@
+crc16.o: crc16.c \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/types.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/config.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/posix_types.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/stddef.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/asm/posix_types.h \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/asm/types.h \
+ crc16.h

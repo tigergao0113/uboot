@@ -1,0 +1,2 @@
+ctype.o: ctype.c \
+ /home/tigerg/Public/axp/uboot/2013Q2/u-boot-2011.12-2013_Q2.1/include/linux/ctype.h

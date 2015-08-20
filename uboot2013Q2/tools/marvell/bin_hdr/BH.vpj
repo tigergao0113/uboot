@@ -1,0 +1,280 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+	Version="10.0"
+	VendorName="SlickEdit"
+	TemplateName="Other C/C++"
+	WorkingDir=".">
+	<Config
+		Name="Debug"
+		Type="cpp"
+		DebugCallbackName="gdb"
+		OutputFile="%bdBH"
+		CompilerConfigName="Latest Version">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				CaptureOutputWith="ProcessBuffer"
+				OutputExts="*.o"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='cc -c -g %i %defd -o "%bd%n.o" "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link">
+				<Exec CmdLine='cc -g -o "%o" %f %libs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" build "%w" "%r"'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" rebuild "%w" "%r"'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				SaveOption="SaveNone"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw">
+				<Exec CmdLine='vsdebugio -prog "%o"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				SaveOption="SaveNone"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%o"'/>
+			</Target>
+		</Menu>
+	</Config>
+	<Config
+		Name="Release"
+		Type="cpp"
+		DebugCallbackName="gdb"
+		OutputFile="%bdBH"
+		CompilerConfigName="Latest Version">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveCurrent"
+				OutputExts="*.o"
+				RunFromDir="%rw">
+				<Exec CmdLine='cc -c -O %i %defd -o "%bd%n.o" "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link">
+				<Exec CmdLine='cc -O -o "%o" %f %libs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" build "%w" "%r"'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" rebuild "%w" "%r"'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				SaveOption="SaveNone"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw">
+				<Exec CmdLine='vsdebugio -prog "%o"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				SaveOption="SaveNone"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%o"'/>
+			</Target>
+		</Menu>
+	</Config>
+	<Rules Name="Compile">
+		<Rule
+			InputExts="*.s"
+			OutputExts="*.o"
+			LinkObject="1">
+			<Exec CmdLine='as -o "%bd%n.o" "%f"'/>
+		</Rule>
+	</Rules>
+	<Files>
+		<Folder
+			Name="Source Files"
+			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.c++;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl;*.d">
+			<F N="bin_entry.s"/>
+			<F N="src_ddr/bin_sramcfg.c"/>
+			<F N="src_ddr/src-internal/ddr3_dfs.c"/>
+			<F N="src_ddr/src-internal/ddr3_dqs.c"/>
+			<F N="src_ddr/src-internal/ddr3_hw_training.c"/>
+			<F N="src_ddr/ddr3_init.c"/>
+			<F N="src_ddr/src-internal/ddr3_pbs.c"/>
+			<F N="src_ddr/src-internal/ddr3_read_leveling.c"/>
+			<F N="src_ddr/src-internal/ddr3_sdram.c"/>
+			<F N="src_ddr/ddr3_spd.c"/>
+			<F N="src_ddr/src-internal/ddr3_write_leveling.c"/>
+			<F N="src_util/mv_twsi.c"/>
+			<F N="mvdispacher.c"/>
+			<F N="src_phy_a370/mvHighSpeedEnvLib.c"/>
+			<F N="src_phy_alp/mvHighSpeedEnvLib.c"/>
+			<F N="src_phy_axp/mvHighSpeedEnvLib.c"/>
+			<F N="src_phy_a370/mvHighSpeedEnvSpec.c"/>
+			<F N="src_phy_alp/mvHighSpeedEnvSpec.c"/>
+			<F N="src_phy_axp/mvHighSpeedEnvSpec.c"/>
+			<F N="src_util/mvUart.c"/>
+			<F N="src_ddr/src-internal/mvXor.c"/>
+			<F N="src_util/setparams.c"/>
+			<F N="src_suspendWUP/suspendWakeup.c"/>
+			<F N="src_util/time.c"/>
+			<F N="src_util/utils.c"/>
+		</Folder>
+		<Folder
+			Name="Header Files"
+			Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.inc;*.sh;*.cpy;*.if">
+			<F N="inc/bin_hdr_twsi.h"/>
+			<F N="inc/bootstrap_def.h"/>
+			<F N="inc/bootstrap_os.h"/>
+			<F N="inc/ddr3_a370.h"/>
+			<F N="inc/ddr3_a370_config.h"/>
+			<F N="inc/ddr3_a370_mc_static.h"/>
+			<F N="inc/ddr3_a370_training_static.h"/>
+			<F N="inc/ddr3_a370_vars.h"/>
+			<F N="inc/ddr3_alp.h"/>
+			<F N="inc/ddr3_alp_config.h"/>
+			<F N="inc/ddr3_alp_mc_static.h"/>
+			<F N="inc/ddr3_alp_training_static.h"/>
+			<F N="inc/ddr3_alp_vars.h"/>
+			<F N="inc/ddr3_axp.h"/>
+			<F N="inc/ddr3_axp_config.h"/>
+			<F N="inc/ddr3_axp_mc_static.h"/>
+			<F N="inc/ddr3_axp_training_static.h"/>
+			<F N="inc/ddr3_axp_vars.h"/>
+			<F N="src_ddr/inc-internal/ddr3_hw_training.h"/>
+			<F N="src_ddr/ddr3_init.h"/>
+			<F N="src_ddr/inc-internal/ddr3_patterns_16bit.h"/>
+			<F N="src_ddr/inc-internal/ddr3_patterns_64bit.h"/>
+			<F N="inc/ddr3_spd.h"/>
+			<F N="inc/mv_os.h"/>
+			<F N="src_phy_a370/mvBHboardEnvSpec.h"/>
+			<F N="src_phy_alp/mvBHboardEnvSpec.h"/>
+			<F N="src_phy_axp/mvBHboardEnvSpec.h"/>
+			<F N="mvBinHdrComponents.h"/>
+			<F N="src_phy_a370/mvHighSpeedEnvSpec.h"/>
+			<F N="src_phy_alp/mvHighSpeedEnvSpec.h"/>
+			<F N="src_phy_axp/mvHighSpeedEnvSpec.h"/>
+			<F N="inc/mvUart.h"/>
+			<F N="src_ddr/inc-internal/mvXor.h"/>
+			<F N="src_ddr/inc-internal/mvXorRegs.h"/>
+			<F N="inc/soc_spec.h"/>
+			<F N="inc/util.h"/>
+		</Folder>
+		<Folder
+			Name="Resource Files"
+			Filters="*.ico;*.cur;*.dlg"/>
+		<Folder
+			Name="Bitmaps"
+			Filters="*.bmp"/>
+		<Folder
+			Name="Other Files"
+			Filters="">
+			<F
+				N="base.mk"
+				Type="Makefile"/>
+			<F N="BH.vpj"/>
+			<F N="BH.vpw"/>
+			<F N="BH.vpwhistu"/>
+			<F N="bin_entry.o"/>
+			<F N="bin_hdr.bin"/>
+			<F N="bin_hdr.dis"/>
+			<F N="bin_hdr.elf"/>
+			<F N="bin_hdr.srec"/>
+			<F N="bin_hdr.uart.bin"/>
+			<F N="bin_hdr.uart.dis"/>
+			<F N="bin_hdr.uart.elf"/>
+			<F N="bin_hdr.uart.srec"/>
+			<F N="src_ddr/bin_sramcfg.o"/>
+			<F N="src_ddr/bin_sramcfg.uart.o"/>
+			<F N="src_ddr/src-internal/ddr3_dfs.o"/>
+			<F N="src_ddr/src-internal/ddr3_dqs.o"/>
+			<F N="src_ddr/src-internal/ddr3_hw_training.o"/>
+			<F N="src_ddr/ddr3_init.o"/>
+			<F N="src_ddr/ddr3_init.uart.o"/>
+			<F N="src_ddr/src-internal/ddr3_pbs.o"/>
+			<F N="src_ddr/src-internal/ddr3_read_leveling.o"/>
+			<F N="src_ddr/src-internal/ddr3_sdram.o"/>
+			<F N="src_ddr/ddr3_spd.o"/>
+			<F N="src_ddr/ddr3_spd.uart.o"/>
+			<F N="ddr3_training_alp.lib"/>
+			<F N="src_ddr/ddr3_training_alp.lib"/>
+			<F N="ddr3_training_axp.lib"/>
+			<F N="src_ddr/ddr3_training_axp.lib"/>
+			<F N="src_ddr/src-internal/ddr3_write_leveling.o"/>
+			<F N="ddr_alp.a"/>
+			<F N="src_ddr/ddr_alp.a"/>
+			<F N="ddr_alp.uart.a"/>
+			<F N="src_ddr/ddr_alp.uart.a"/>
+			<F N="dramregs.txt"/>
+			<F N="libgcc.lib"/>
+			<F N="linker.scr"/>
+			<F N="src_util/mv_twsi.o"/>
+			<F N="src_util/mv_twsi.uart.o"/>
+			<F N="mvdispacher.o"/>
+			<F N="mvdispacher.uart.o"/>
+			<F N="src_phy_alp/mvHighSpeedEnvLib.o"/>
+			<F N="src_phy_alp/mvHighSpeedEnvLib.uart.o"/>
+			<F N="src_phy_alp/mvHighSpeedEnvSpec.o"/>
+			<F N="src_phy_alp/mvHighSpeedEnvSpec.uart.o"/>
+			<F N="src_util/mvUart.o"/>
+			<F N="src_util/mvUart.uart.o"/>
+			<F N="src_ddr/src-internal/mvXor.o"/>
+			<F N="params.raw"/>
+			<F N="params.txt"/>
+			<F N="phy_alp.a"/>
+			<F N="src_phy_alp/phy_alp.a"/>
+			<F N="phy_alp.uart.a"/>
+			<F N="src_phy_alp/phy_alp.uart.a"/>
+			<F N="src_suspendWUP/suspendWakeup.o"/>
+			<F N="src_suspendWUP/suspendWakeup.uart.o"/>
+			<F N="suspendWUP.a"/>
+			<F N="src_suspendWUP/suspendWUP.a"/>
+			<F N="suspendWUP.uart.a"/>
+			<F N="src_suspendWUP/suspendWUP.uart.a"/>
+			<F N="src_util/time.o"/>
+			<F N="src_util/time.uart.o"/>
+			<F N="utils.a"/>
+			<F N="src_util/utils.a"/>
+			<F N="src_util/utils.o"/>
+			<F N="utils.uart.a"/>
+			<F N="src_util/utils.uart.a"/>
+			<F N="src_util/utils.uart.o"/>
+		</Folder>
+	</Files>
+</Project>
